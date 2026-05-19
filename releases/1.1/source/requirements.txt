@@ -1,0 +1,14 @@
+# PSD Normalizer build dependencies
+# Install with:  pip install -r requirements.txt
+
+# Common
+pyinstaller>=6.0
+customtkinter>=5.2
+tkinterdnd2>=0.3
+
+# Right-side file preview: thumbnail extraction
+psd-tools>=1.10
+Pillow>=10.0
+
+# Windows only — drives Photoshop via COM. Skipped automatically on Mac.
+pywin32>=306; sys_platform == "win32"

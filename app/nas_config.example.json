@@ -1,0 +1,5 @@
+{
+  "_comment": "Placeholder NAS configuration. Copy to nas_config.json (gitignored) and fill in the real share path before building. nas_config.py prefers .json over .example.json so the real path takes precedence on the build machine.",
+  "nas_root": "\\\\nas\\TA-F\\PS-BATCH",
+  "manifest_name": "latest.json"
+}

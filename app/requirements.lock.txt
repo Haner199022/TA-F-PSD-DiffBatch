@@ -1,0 +1,39 @@
+# Locked, reproducible build dependencies for TA-F PSD DiffBatch.
+#
+# build.bat installs from THIS file (not requirements.txt) so the produced
+# .exe is byte-stable across machines. Bumping any pin should be a deliberate
+# commit, not a side-effect of "pip install -U".
+#
+# To regenerate after upgrading a dep:
+#     1. (Windows) python -m pip install -U <pkg>
+#     2. python -m pip freeze > requirements.lock.txt
+#     3. Manually trim down to project deps + their transitives
+#     4. Verify build.bat still produces a green build before commit
+#
+# Versions below are the set under which v1.5.0 was tested on macOS dev
+# 2026-05-19. On the Windows build box the freeze will additionally include
+# pywin32 + pywin32-ctypes — keep them in the platform marker form so this
+# file remains usable cross-platform.
+
+# Core build tool
+pyinstaller==6.20.0
+altgraph==0.17.5            # pyinstaller transitive
+setuptools==82.0.1          # pyinstaller transitive (needed at build time)
+
+# UI
+customtkinter==5.2.2
+tkinterdnd2==0.4.3
+
+# Right-panel PSD preview
+psd-tools==1.17.0
+Pillow==12.2.0
+
+# Windows COM bridge — pinned only when building on Windows
+pywin32>=306; sys_platform == "win32"
+pywin32-ctypes>=0.2.2; sys_platform == "win32"
+
+# Test runner — kept here so build.bat [4/8] doesn't need a separate install
+pytest>=8.0,<10
+
+# Build-time linter (not used at runtime; required by build.bat [3/8])
+ruff>=0.6,<1
