@@ -1,0 +1,52 @@
+name: 提一个功能想法
+description: 工具现在做不到的事，你希望它能做
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        在写之前，先看一眼 [`plan/`](../../tree/main/plan) 里的路线图——
+        你想到的可能已经在 v1.5.1 / v1.6 计划里了。如果不在，欢迎继续。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你在尝试解决什么问题？
+      description: |
+        不要直接写 "请加 X 功能"。先说**你为什么需要它**——
+        你每天工作中卡在哪里、跑哪一类任务、当前怎么 workaround 的。
+        这样我能想出可能比你提的方案更好的解。
+      placeholder: |
+        我每周要处理 50 个 PSD，每个都要……
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: 你期望的解决方案（可选）
+      description: 如果心里已经有想法，写一下。如果没有，留空也行。
+      placeholder: |
+        最好能在工具里加一个……
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 你考虑过的其他做法？
+      description: 比如 "用某个 PS 自带功能 / 写个一次性脚本 / 手动重复"。
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 对你日常工作的影响程度
+      options:
+        - 严重影响 - 每天都会撞到，挡住效率
+        - 中等 - 一周撞 1-2 次，能 workaround
+        - 锦上添花 - 偶尔有 / 主要为了优雅
+    validations:
+      required: true

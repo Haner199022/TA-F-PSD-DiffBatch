@@ -1,0 +1,12 @@
+# Disable the "Open a blank issue" link — every issue should come through
+# one of the structured templates above. If none fit, the contact link
+# below redirects to a project discussion thread (or just chat).
+blank_issues_enabled: false
+
+contact_links:
+  - name: 看文档
+    url: https://github.com/Haner199022/TA-F-PSD-DiffBatch/blob/main/TROUBLESHOOTING.md
+    about: 7 类最常见问题与解法，先翻这里
+  - name: 直接在群里问
+    url: https://github.com/Haner199022/TA-F-PSD-DiffBatch
+    about: 公司内部小工具，群里问比开 issue 快。Issue 留给需要 audit trail 的事情（bug / feature）。

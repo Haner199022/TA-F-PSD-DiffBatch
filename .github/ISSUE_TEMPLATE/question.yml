@@ -1,0 +1,34 @@
+name: 问一个使用问题
+description: "工具能不能 X / X 怎么用 / 看不懂 X"
+title: "[q] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        在开 issue 之前，先看一眼这两份文档——能解掉大多数问题：
+
+        - [TROUBLESHOOTING.md](../TROUBLESHOOTING.md) — 7 类常见问题与解法
+        - [NAS-LAYOUT.md](../NAS-LAYOUT.md) — NAS 上的东西怎么放、怎么发版
+
+        如果都没覆盖，写下面：
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 你想做到什么？
+      description: 描述目标，不是步骤。
+      placeholder: |
+        我想批量把 50 个 PSD 的 ……
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: 你已经试过什么？
+      description: 不写"什么都没试"也行，但说清楚减少来回。
+      placeholder: |
+        看了 ANALYZE 按钮但不知道之后怎么……
+    validations:
+      required: false
