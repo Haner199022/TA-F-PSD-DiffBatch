@@ -168,14 +168,24 @@ installer can't replace a running Python interpreter.
 
 ## Reporting a new bug
 
-Two paths:
+Three paths, in order of speed:
 
-1. **In-app** — `Help → Copy diagnostic info`, paste the result into
-   chat to the maintainer.
-2. **From scratch** — include:
-   - Output of `Help → About` (version + Python + PS).
-   - Last 200 lines of `%LocalAppData%\TA-F\PS-BATCH\logs\app.log`.
-   - What you did + what you expected + what happened.
+1. **In-app** (fastest for you) — `Help → Copy diagnostic info` →
+   paste into chat to the maintainer.
+2. **GitHub issue** (best for tracking) — open a [Bug
+   report](https://github.com/Haner199022/TA-F-PSD-DiffBatch/issues/new?template=bug_report.yml).
+   The form has a dedicated paste-here field for diagnostic info.
+3. **GitHub Discussions** (best for "is this a bug?") — if you're
+   not sure whether what you're seeing is a real bug or just
+   misunderstanding, ask in
+   [Discussions Q&A](https://github.com/Haner199022/TA-F-PSD-DiffBatch/discussions/categories/q-a)
+   first. The maintainer (or another colleague who hit it) can
+   confirm before you spend time writing a full bug report.
 
-The diagnostic blob from path (1) covers all three automatically;
-prefer it.
+For paths 2-3, include:
+- Output of `Help → About` (version + Python + PS).
+- Last 200 lines of `%LocalAppData%\TA-F\PS-BATCH\logs\app.log`.
+- What you did + what you expected + what happened.
+
+The diagnostic blob from path 1 covers all three automatically;
+prefer pasting it.
