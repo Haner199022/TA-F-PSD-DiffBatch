@@ -165,9 +165,12 @@ If you're using PS-BATCH for the first time:
 3. **If the share is unreachable** (off the office network, VPN
    down), the tool just runs the local version. You'll see a one-off
    toast on first launch saying so; click `不再提醒` to silence it.
-4. **Stuck?** `Help → Copy diagnostic info` copies a paste-ready
-   report (version + paths + logs from three sources) to your
-   clipboard. Paste into chat to the maintainer.
+4. **Stuck?** Three ways to get help, fastest first:
+   - `Help → Copy diagnostic info` → paste into chat (fastest).
+   - Open a [bug report](https://github.com/Haner199022/TA-F-PSD-DiffBatch/issues/new?template=bug_report.yml)
+     on GitHub (best for tracking).
+   - Ask in [Discussions](https://github.com/Haner199022/TA-F-PSD-DiffBatch/discussions)
+     if you're not sure whether it's a bug.
 
 See `TROUBLESHOOTING.md` for known issues + workarounds.
 
