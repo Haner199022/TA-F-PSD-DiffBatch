@@ -1,0 +1,88 @@
+name: 报告一个 bug
+description: 工具行为不符合预期 / 报错 / 崩溃 / 卡死
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢报 bug。请尽量填全下面的字段——尤其是 **诊断信息**。
+        不知道怎么填诊断信息？工具内 `Help → Copy diagnostic info`
+        会自动复制 4 个日志源到剪贴板，粘进来即可。
+
+  - type: input
+    id: version
+    attributes:
+      label: 工具版本
+      description: 从 `Help → About` 看；或者安装目录里 setup 文件名。
+      placeholder: "1.5.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS (开发模式)
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 出了什么问题？
+      description: 一句话描述现象。比如 "RUN BATCH 跑到第 3 个文件就卡住了"。
+      placeholder: |
+        点了 RUN BATCH 之后……
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你期望发生什么？
+      placeholder: |
+        预期应该……
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: 怎么复现？
+      description: 一步步写。能复现的 bug 比无法复现的 bug 修起来快 10 倍。
+      placeholder: |
+        1. 启动工具
+        2. 选 After PSD: ...
+        3. 选 Batch folder: ...
+        4. 点 RUN BATCH
+        5. 观察到 …
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: 诊断信息（粘贴这里）
+      description: |
+        工具内 `Help → Copy diagnostic info` → 直接粘进来。
+        包含：版本 / Python / PS 路径 / GUI log / app.log / normalize_log / script_run_log。
+        不知道怎么拿，看 [TROUBLESHOOTING.md](../TROUBLESHOOTING.md)。
+      placeholder: |
+        TA-F PSD DiffBatch diagnostic
+        =============================
+        Version:   1.5.0
+        ...
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截图（可选）
+      description: 直接拖图片到这里即可。
